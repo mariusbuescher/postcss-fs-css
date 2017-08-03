@@ -1,0 +1,15 @@
+@import "another.css";
+@import "http://example.com/example.css";
+
+@font-face {
+    font-family: myFirstFont;
+    src: url("fonts/sample.woff");
+}
+
+.selector {
+    background: url("/img/background.svg");
+}
+
+.external {
+    background: url("http://example.com/background.jpg");
+}

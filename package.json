@@ -1,0 +1,28 @@
+{
+  "name": "postcss-fs-css",
+  "version": "1.0.0",
+  "description": "A postcss-plugin for transforming your CSS to FirstSpirit compatible CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mariusbuescher/postcss-fs-css.git"
+  },
+  "keywords": [
+    "css",
+    "postcss",
+    "postcss-plugin",
+    "FirstSpirit"
+  ],
+  "author": "Marius Büscher <marius.buescher@denkwerk.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mariusbuescher/postcss-fs-css/issues"
+  },
+  "homepage": "https://github.com/mariusbuescher/postcss-fs-css",
+  "dependencies": {
+    "postcss": ">=5.0.21"
+  }
+}

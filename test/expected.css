@@ -1,0 +1,11 @@
+@import "$CMS_REF(media:"sample")$";
+@import "http://example.com/example.css";
+
+@font-face {
+    font-family: myFirstFont;
+    src: url("$CMS_REF(media:"sample")$");
+}
+
+.selector {
+    background: url("$CMS_REF(media:"sample")$");
+}
