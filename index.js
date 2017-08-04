@@ -31,7 +31,7 @@ const fsCss = postcss.plugin('postcss-fs-css', (options) => {
     }
 
     function transformUrl(src) {
-        let abs = (options.abs !== null) ? options.abs : null;
+        let abs = (options.abs) ? options.abs : null;
         const filename = src.replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, "");
         let uuid = filenameToUuid(filename).toLowerCase();
 
