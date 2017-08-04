@@ -1,5 +1,5 @@
 @import "another.css";
-@import "http://example.com/example.css";
+@import "//example.com/example.css";
 
 @font-face {
     font-family: myFirstFont;

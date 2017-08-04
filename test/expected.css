@@ -1,5 +1,5 @@
 @import "$CMS_REF(media:"another")$";
-@import "http://example.com/example.css";
+@import "//example.com/example.css";
 
 @font-face {
     font-family: myFirstFont;
@@ -8,4 +8,8 @@
 
 .selector {
     background: url("$CMS_REF(media:"background_in_oel")$");
+}
+
+.external {
+    background: url("http://example.com/background.jpg");
 }
