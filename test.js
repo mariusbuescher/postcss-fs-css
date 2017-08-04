@@ -4,7 +4,7 @@ const fs = require('fs');
 fs.readFile('test/test.css', (err, data) => {
     if (err) {
         console.log(err.message);
-        exit(1);
+        process.exit(1);
     }
 
     postcss([
@@ -13,19 +13,23 @@ fs.readFile('test/test.css', (err, data) => {
         fs.readFile('test/expected.css', (err, expected) => {
             if (err) {
                 console.log(err.message);
-                exit(1);
+                process.exit(1);
             }
 
-            if (expected.toString().trim() !== result.trim()) {
+            if (expected.toString().trim() !== result.css.trim()) {
                 console.log('Problems with css transformation.');
-                exit(2);
+                console.log('Expected result:');
+                console.log(expected.toString());
+                console.log('Actual result:');
+                console.log(result.css);
+                process.exit(2);
             } else {
                 console.log('Everything fine.');
-                exit(0);
+                process.exit(0);
             }
         });
-    }).catch(() => {
+    }).catch((e) => {
         console.log('Problem when rendering the css');
-        exit(1);
+        process.exit(1);
     });
 });
