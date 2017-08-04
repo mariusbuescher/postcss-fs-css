@@ -1,0 +1,15 @@
+@import "$CMS_REF(media:"another")$?rid=$CMS_VALUE(ref(media:"another").target.releaseRevision.id, default:#global.now.timeInMillis)$";
+@import "//example.com/example.css";
+
+@font-face {
+    font-family: myFirstFont;
+    src: url("$CMS_REF(media:"sample")$?rid=$CMS_VALUE(ref(media:"sample").target.releaseRevision.id, default:#global.now.timeInMillis)$");
+}
+
+.selector {
+    background: url("$CMS_REF(media:"background_in_oel")$?rid=$CMS_VALUE(ref(media:"background_in_oel").target.releaseRevision.id, default:#global.now.timeInMillis)$");
+}
+
+.external {
+    background: url("http://example.com/background.jpg");
+}

@@ -1,0 +1,15 @@
+@import "$CMS_REF(media:"another", abs:test)$";
+@import "//example.com/example.css";
+
+@font-face {
+    font-family: myFirstFont;
+    src: url("$CMS_REF(media:"sample", abs:test)$");
+}
+
+.selector {
+    background: url("$CMS_REF(media:"background_in_oel", abs:test)$");
+}
+
+.external {
+    background: url("http://example.com/background.jpg");
+}

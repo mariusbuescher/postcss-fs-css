@@ -1,6 +1,7 @@
 const postcss = require('postcss');
 const fs = require('fs');
 
+console.log('Testing mapped files');
 fs.readFile('test/test.css', (err, data) => {
     if (err) {
         console.log(err.message);
@@ -8,9 +9,13 @@ fs.readFile('test/test.css', (err, data) => {
     }
 
     postcss([
-        require('./index.js')()
+        require('../index.js')({
+            fileMapping: {
+                'fonts/sample.woff': 'sample_1'
+            }
+        })
     ]).process(data.toString()).then((result) => {
-        fs.readFile('test/expected.css', (err, expected) => {
+        fs.readFile('test/expected-map.css', (err, expected) => {
             if (err) {
                 console.log(err.message);
                 process.exit(1);

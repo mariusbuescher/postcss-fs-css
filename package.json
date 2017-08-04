@@ -4,7 +4,7 @@
   "description": "A postcss-plugin for transforming your CSS to FirstSpirit compatible CSS",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test/test.js && node test/test-map.js && node test/test-cache.js && node test/test-abs.js"
   },
   "repository": {
     "type": "git",
